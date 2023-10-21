@@ -43,6 +43,7 @@ body {
   height: 100vh;
   font-family: 'Montserrat';
   color: #10214e;
+  overflow: hidden;
 }
 
 article {
@@ -51,9 +52,12 @@ article {
   padding: 2rem;
   border-radius: 3rem;
   transform: skewY(-10deg);
+  position: relative;
+  transition-timing-function: ease;
+  transition: 2s;
 }
 
-.article-1 {
+#article-1 {
   background: linear-gradient(135deg, #ecfae9a6, #82e2bda6);
 }
 
@@ -83,9 +87,10 @@ h1 {
 
 svg {
   height: 1.5rem;
+  cursor: pointer;
 }
 
-.article-2 {
+#article-2 {
   background: linear-gradient(135deg, #c9f9ffaf, #9bc7f9a9);
   display: flex;
   flex-direction: column;
@@ -104,7 +109,7 @@ svg {
   height: 91%;
 }
 
-.article-2 img, .article-2 p {
+#article-2 img, #article-2 p {
   margin: auto;
   text-align: center;
   margin-top: 11px;
@@ -135,9 +140,47 @@ svg {
 }
 
 
-.article-2 img {
+#article-2 img {
   height: 8rem;
 }
 
 
 
+/* .front-card {
+  z-index: 300;
+  position: relative;
+  top: 0px;
+  right: 205px;
+}
+
+.back-card {
+  z-index: -1;
+  position: relative;
+  bottom: 50px;
+  left: 205px;
+} */
+
+
+.article-1__front {
+  z-index: 1;
+  top: 0px;
+  right: 205px;
+}
+
+.article-1__back {
+  z-index: -1;
+  top: -50px;
+  right: 355px;
+}
+
+.article-2__front {
+  z-index: 1;
+  bottom: 0px;
+  left: 355px;
+}
+
+.article-2__back {
+  z-index: -1;
+  bottom: 50px;
+  left: 205px;
+}
